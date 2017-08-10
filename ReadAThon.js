@@ -131,6 +131,9 @@ function validate() {
     if ($("#student").val() == "") {
         errorText += "<li>Please specify at least a student name.</li>";
         good = false;
+    } else if ($("#student").val().indexOf(' ') < 0) {
+        errorText += "<li>Please specify the full student name (first and last name)</li>";
+        good = false;
     }
 
     if (good) {
