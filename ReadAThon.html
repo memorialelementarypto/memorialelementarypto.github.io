@@ -23,10 +23,13 @@
         <p>Thank your for choosing to donate to the <strong>Memorial Elementary School's <u>Read-A-Thon</u></strong> program!</p>
         <p>Please enter your dontation information below and click the <b>Donate</b> button. This will open PayPal in a new window to finish the checkout process.</p>
         <p><em>All donations are tax deductable!</em></p>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseInstructions" aria-expanded="false" aria-controls="collapseInstructions">
 		  Instructions
+        </button>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsePrizes" aria-expanded="false" aria-controls="collapsePrizes">
+		  Prizes
 		</button>
-        <div class="collapse" id="collapseExample">
+        <div class="collapse" id="collapseInstructions">
             <br/>
             <div class="well">
                 We are using PayPal to process all transactions.
@@ -40,6 +43,15 @@
                 <ol>
                     <li>Log into PayPal (if you have an account) or choose to pay with a Debit or Credit card</li>
                     <li>Enter your payment information.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="collapse" id="collapsePrizes">
+            <br/>
+            <div class="well">
+                Prizes! Kids have the opportunity to win any of the following:
+                <ol>
+                    <li>Pie in the face!</li>
                 </ol>
             </div>
         </div>
@@ -87,7 +99,6 @@
                         <select id="fixedAmount" class="form-control" name="fixedAmount" onChange="updateFixedAmount();">
 								<option value=""></option>
 								<option value="10">$10</option>
-								<option value="15">$15</option>
 								<option value="20">$20</option>
 								<option selected="" value="25">$25</option>
 								<option value="50">$50</option>
