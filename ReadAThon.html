@@ -25,39 +25,86 @@
         <p>Thank your for choosing to donate to the <strong>Memorial Elementary School's <u>Read-A-Thon</u></strong> program!</p>
         <p>Please enter your dontation information below and click the <b>Donate</b> button. This will open PayPal in a new window to finish the checkout process.</p>
         <p><em>All donations are tax deductable!</em></p>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseInstructions" aria-expanded="false" aria-controls="collapseInstructions">
+
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapseInstr" aria-expanded="true" aria-controls="collapseInstr" aria-pressed="false">
 		  Instructions
         </button>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsePrizes" aria-expanded="false" aria-controls="collapsePrizes">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapsePrizes" aria-expanded="true" aria-controls="collapsePrizes" aria-pressed="false">
 		  Prizes
-		</button>
-        <div class="collapse" id="collapseInstructions">
-            <br/>
-            <div class="well">
-                We are using PayPal to process all transactions.
-                <ol>
-                    <li>Select your donation amount. You can choose one of our suggested amounts, or enter one of your own amounts.</li>
-                    <li>Enter the student's name to whom you are donating for. By entering a name, the student and their class can get credit for prizes!</li>
-                    <li>Enter the student's grade and teacher. If you don't know the teacher or grade you can leave them blank -- but be sure to at least enter a student name</li>
-                    <li>Review your information and press the DONATE button. You will now be taken to <b>PayPal</b> to process the donation.</li>
-                </ol>
-                Once you click the donate button, you now must process your payment through PayPal:
-                <ol>
-                    <li>Log into PayPal (if you have an account) or choose to pay with a Debit or Credit card</li>
-                    <li>Enter your payment information.</li>
-                </ol>
+        </button>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFAQ" aria-expanded="true" aria-controls="collapseFAQ" aria-pressed="false">
+		  FAQ
+        </button>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default panel-noborder">
+                <div id="collapseInstr" class="panel-collapse collapse panel panel-default" role="tabpanel">
+                    <div class="panel-heading">
+                        <b>Instructions</b>
+                        <button class="pull-right btn btn-xs" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapseInstr" aria-expanded="true" aria-controls="collapseInstr" aria-pressed="false">X</button>
+                    </div>
+                    <div class="panel-body">
+                        <p>We are using PayPal to process all transactions.</p>
+                        <ol>
+                            <li>Select your donation amount. You can choose one of our suggested amounts, or enter one of your own amounts.</li>
+                            <li>Enter the student's name to whom you are donating for. By entering a name, the student and their class can get credit for prizes!</li>
+                            <li>Enter the student's grade and teacher. If you don't know the teacher or grade you can leave them blank -- but be sure to at least enter a student name</li>
+                            <li>Review your information and press the DONATE button. You will now be taken to <b>PayPal</b> to process the donation.</li>
+                        </ol>
+                        <p>Once you click the donate button, you now must process your payment through PayPal:</p>
+                        <ol>
+                            <li>Log into PayPal (if you have an account) or choose to pay with a Debit or Credit card</li>
+                            <li>Enter your payment information.</li>
+                        </ol>
+
+                        <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapseInstr" aria-expanded="true" aria-controls="collapseInstr" aria-pressed="false">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default panel-noborder">
+                <div id="collapsePrizes" class="panel-collapse collapse panel panel-default" role="tabpanel">
+                    <div class="panel-heading">
+                        <b>Prizes</b>
+                        <button class="pull-right btn btn-xs" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapsePrizes" aria-expanded="true" aria-controls="collapsePrizes" aria-pressed="false">X</button>
+                    </div>
+                    <div class="panel-body">
+                        <p>Prizes! Kids have the opportunity to win any of the following:</p>
+                        <ol>
+                            <li>A $5 coupon good at the book fair for every $50 donated</li>
+                            <li>Pie in the face!</li>
+                        </ol>
+                        <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapsePrizes" aria-expanded="true" aria-controls="collapsePrizes" aria-pressed="false">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default panel-noborder">
+                <div id="collapseFAQ" class="panel-collapse collapse panel panel-default" role="tabpanel">
+                    <div class="panel-heading">
+                        <b>FAQ</b>
+                        <button class="pull-right btn btn-xs" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFAQ" aria-expanded="true" aria-controls="collapseFAQ" aria-pressed="false">X</button>
+                    </div>
+                    <div class="panel-body">
+                        <dl>
+                            <dt>When will my child receive their prize?</dt>
+                            <dd>Sometime in the future.</dd>
+                        </dl>
+                        <dl>
+                            <dt>What are the dates of the Read-A-Thon?</dt>
+                            <dd>From this day to that.</dd>
+                        </dl>
+                        <dl>
+                            <dt>What if I don't want to pay online?</dt>
+                            <dd>You can provide donations in the form of CASH (no checks) to the child's teacher, placed in a sealed envelope with the following information on the outside of the envelope: Your Name, Child's Name, Teacher</dd>
+                        </dl>
+                        <dl>
+                            <dt>Can I deduct my donation on my taxes?</dt>
+                            <dd>Yes! Be sure to keep your receipt from PayPal and when filing your taxes, provide the following additional information:...</dd>
+                        </dl>
+
+                        <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFAQ" aria-expanded="true" aria-controls="collapseFAQ" aria-pressed="false">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="collapse" id="collapsePrizes">
-            <br/>
-            <div class="well">
-                Prizes! Kids have the opportunity to win any of the following:
-                <ol>
-                    <li>Pie in the face!</li>
-                </ol>
-            </div>
-        </div>
-        <hr class="clearfix" />
         <div id="validateError" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content panel-warning">

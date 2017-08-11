@@ -9,3 +9,11 @@
 .form-control {
     font-size: 16px;
 }
+
+.panel-noborder {
+    border: none;
+}
+
+#accordion {
+    margin-top: 5px;
+}
