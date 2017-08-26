@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Memorial Elementary PTO - Read-A-Thon Donation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="ReadAThon.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <img class="visible-xs" alt="Memorial Logo" src="Memorial.png">
+        <img class="pull-left gap-img hidden-xs" alt="Memorial Logo" src="Memorial.png">
+        <img class="pull-right gap-img hidden-xs" alt="Memorial Logo" src="read.png">
+        <h1>Memorial Elementary PTO<br/><small>Business Read-A-Thon Donation</small></h1>
+        <div class="hidden-xs">&nbsp;</div>
+        <p>Thank your for having your business donate to the <strong>Memorial Elementary School's <u>Read-A-Thon</u></strong> program!</p>
+        <p>Please enter your dontation information below and click the <b>Donate</b> button. This will open PayPal in a new window to finish the checkout process.</p>
+        <p><em>All donations are tax deductable! (TAX EIN #00494944).  Tax forms available upon request at <a href="mailto:email@address.com">email@address.com</a></em></p>
+
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapseInstr" aria-expanded="true" aria-controls="collapseInstr" aria-pressed="false">
+		  Instructions
+        </button>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default panel-noborder">
+                <div id="collapseInstr" class="panel-collapse collapse panel panel-default" role="tabpanel">
+                    <div class="panel-heading">
+                        <b>Instructions</b>
+                        <button class="pull-right btn btn-xs" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapseInstr" aria-expanded="true" aria-controls="collapseInstr" aria-pressed="false">X</button>
+                    </div>
+                    <div class="panel-body">
+                        <p>We are using PayPal to process all transactions.</p>
+                        <ol>
+                            <li>Select your donation amount. You can choose one of our suggested amounts, or enter one of your own amounts.</li>
+                            <li>Enter the student's name to whom you are donating for. By entering a name, the student and their class can get credit for prizes!</li>
+                            <li>Enter the student's grade and teacher. If you don't know the teacher or grade you can leave them blank -- but be sure to at least enter a student name</li>
+                            <li>Review your information and press the DONATE button. You will now be taken to <b>PayPal</b> to process the donation.</li>
+                        </ol>
+                        <p>Once you click the donate button, you now must process your payment through PayPal:</p>
+                        <ol>
+                            <li>Log into PayPal (if you have an account) or choose to pay with a Debit or Credit card</li>
+                            <li>Enter your payment information.</li>
+                        </ol>
+
+                        <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-parent="#accordion" href="#collapseInstr" aria-expanded="true" aria-controls="collapseInstr" aria-pressed="false">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="validateError" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content panel-warning">
+                    <div class="modal-header bg-warning text-warning">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Validation Error</h4>
+                    </div>
+                    <div id="validateErrorMsg" class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"> </div>
+            <div class="col-md-5">
+                <!-- SANDBOX
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" id="donationForm" method="post" name="donationForm" target="paypal">
+					<input name="business" type="hidden" value="CC8PAB6KTU85C">
+			-->
+                <form action="https://www.paypal.com/cgi-bin/webscr" id="donationForm" method="post" name="donationForm" target="paypal">
+                    <input name="business" type="hidden" value="NV5X2HE7YPHM6">
+
+                    <input name="cmd" type="hidden" value="_xclick">
+                    <input name="item_name" type="hidden" value="ReadAThon Donation">
+                    <input name="no_shipping" type="hidden" value="1">
+                    <input id="item_number" name="item_number" type="hidden" value="Corporate Donor">
+                    <input id="amount" name="amount" type="hidden" value="">
+                    <input id="on0" name="on0" type="hidden" value="Company">
+                    <input id="os0" name="os0" type="hidden" value="">
+
+                    <div class="form-group">
+                        <label for="fixedAmount">Suggested Donation:</label>
+                        <select id="fixedAmount" class="form-control" name="fixedAmount" onChange="updateFixedAmount();">
+								<option value=""></option>
+								<option value="25">$25</option>
+								<option value="50">$50</option>
+								<option selected="" value="100">$100</option>
+								<option value="200">$200</option>
+								<option value="250">$250</option>
+							</select>
+                        <div class="form-group">
+                            <label for="variableAmount">or specify a donation amount:</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input id="variableAmount" class="form-control" maxlength="10" name="variableAmount" type="text" onChange="updateVariableAmount();">
+                            </div>
+                        </div>
+                    </div>
+                    <p>Please also provide the following information:</p>
+                    <div class="form-group">
+                        <label for="company">Business Name:</label>
+                        <input id="company" class="form-control" name="company" maxlength="25" type="text">
+                        <span class="help-block">Please provide your company name.</span>
+                    </div>
+                    <div class="form-group text-center">
+                        <button id="buttonDone" class="btn btn-primary btn-lg " type="button" onClick="validate();">
+							<img align="center" alt="PayPal Donate" border="0" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif">
+						</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr/>
+        <div class="text-center">
+            <address>
+				<strong>Memorial Elementary PTO, Inc.</strong><br/>
+				1052 Park Ave<br/>
+				Valparaiso, IN 46385<br/>
+				<a href="mailto:memorialvalpo@gmail.com">memorialvalpo@gmail.com</a><br/>
+				Tax ID EIN (for IRS reporting): 47-999999
+			</address>
+        </div>
+    </div>
+</body>
+<script src="ReadAThonCorp.js"></script>
+
+</html>
