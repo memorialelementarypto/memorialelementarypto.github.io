@@ -46,7 +46,7 @@
                         </ol>
                         <p>Once you click the donate button, you now must process your payment through PayPal:</p>
                         <ol>
-                            <li>Log into PayPal (if you have an account) or choose to pay with a Debit or Credit card</li>
+                            <li>Log into PayPal (if you have an account) or choose to <b>Pay with a Debit or Credit Card</b>. When paying by debig/credit you do not need to log in.</li>
                             <li>Enter your payment information.</li>
                         </ol>
 
@@ -86,8 +86,10 @@
                     <input name="no_shipping" type="hidden" value="1">
                     <input id="item_number" name="item_number" type="hidden" value="Corporate Donor">
                     <input id="amount" name="amount" type="hidden" value="">
-                    <input id="on0" name="on0" type="hidden" value="Company">
+                    <input id="on0" name="on0" type="hidden" value="Student">
                     <input id="os0" name="os0" type="hidden" value="">
+                    <input id="on1" name="on1" type="hidden" value="Company">
+                    <input id="os1" name="os1" type="hidden" value="">
 
                     <div class="form-group">
                         <label for="fixedAmount">Suggested Donation:</label>
@@ -114,6 +116,11 @@
                         <label for="company">Business Name:</label>
                         <input id="company" class="form-control" name="company" maxlength="25" type="text">
                         <span class="help-block">Please provide your company name.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="student">Student Name (Optional):</label>
+                        <input id="student" class="form-control" name="student" maxlength="25" type="text">
+                        <span class="help-block">Please provide the full student name if you are donating for a student (first and last name).</span>
                     </div>
                     <div class="form-group text-center">
                         <button id="buttonDone" class="btn btn-primary btn-lg " type="button" onClick="validate();">

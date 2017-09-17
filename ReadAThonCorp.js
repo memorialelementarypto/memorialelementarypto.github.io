@@ -70,7 +70,8 @@ function validate() {
 
     if (good) {
         $("#amount").val(donation);
-        $("#os0").val($("#company").val());
+        $("#os0").val($("#student").val());
+        $("#os1").val($("#company").val());
 
         $("#donationForm").submit();
     } else {
