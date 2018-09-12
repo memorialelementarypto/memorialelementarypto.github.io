@@ -23,12 +23,13 @@ var teacherJSON = {
         "Watkins"
     ],
     "4th": [
-        "Schulte",
+        "",
         "Martinek"
     ],
     "5th": [
         "Rainey",
-        "Spencer"
+        "Spencer",
+        "Millies"
     ]
 };
 
